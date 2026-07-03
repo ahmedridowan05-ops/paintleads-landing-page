@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #E0BE6A;
+  --color-on-primary: #2B1416;
+  --color-background: #160F0F;
+  --color-on-surface: #F5EEE8;
+  --color-on-surface-variant: #F0E8E4;
+  --color-deep-forest: #2B1416;
+  --color-mid-forest: #3E1D20;
+  --color-outline: #8A6F6A;
+  --color-outline-variant: #8A6F6A;
+  --color-gold-accent: #E0BE6A;
+  --color-surface-container-low: #160F0F;
+
+  --spacing-margin-desktop: 48px;
+  --spacing-margin-mobile: 16px;
+  --spacing-container-max: 1280px;
+  --spacing-section-padding: 80px;
+
+  --font-fraunces: "Fraunces", serif;
+  --font-dmsans: "DM Sans", sans-serif;
+
+  --animate-marquee: marquee 30s linear infinite;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-100%); }
+}
+
+@utility font-display-lg { 
+  font-family: "Fraunces", serif; 
+  font-weight: 700;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.45);
+}
+
+@utility font-headline-lg { 
+  font-family: "Fraunces", serif; 
+  font-weight: 600;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.35);
+}
+
+@utility font-headline-lg-mobile { 
+  font-family: "Fraunces", serif; 
+  font-weight: 600;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.35);
+}
+
+@utility font-title-md { 
+  font-family: "Fraunces", serif; 
+  font-weight: 600;
+}
+
+@utility font-body-md { 
+  font-family: "DM Sans", sans-serif; 
+  font-weight: 400;
+}
+
+@utility font-body-lg { 
+  font-family: "DM Sans", sans-serif; 
+  font-weight: 400;
+}
+
+@utility font-label-sm { 
+  font-family: "DM Sans", sans-serif; 
+  font-weight: 500;
+}
+
+body {
+    background-color: #160F0F;
+    color: #F0E8E4;
+    overflow-x: hidden;
+}
+
+.gilded-glow {
+    border: 1px solid rgba(201, 162, 75, 0.4);
+    box-shadow: 0 4px 30px -4px rgba(201, 162, 75, 0.05);
+    transition: all 0.3s ease;
+}
+
+.gilded-glow:hover {
+    border-color: rgba(201, 162, 75, 0.5);
+    box-shadow: 0 8px 40px -4px rgba(201, 162, 75, 0.1);
+    transform: translateY(-2px);
+}
+
+.gilded-glow-strong {
+    border: 1px solid rgba(201, 162, 75, 0.5);
+    box-shadow: 0 4px 30px -4px rgba(201, 162, 75, 0.1);
+}
+
+.hero-gradient {
+    background: radial-gradient(circle at top, rgba(43, 20, 22, 0.6) 0%, #160F0F 80%);
+}
+
+.nav-scrolled {
+    background-color: #160F0F;
+    border-bottom: 1px solid rgba(201, 162, 75, 0.2);
+}
