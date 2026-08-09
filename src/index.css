@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #221215;
+    color: #F6F2EA;
+  }
+  
+  h1, h2, h3, h4, .font-heading {
+    font-family: 'Instrument Serif', Georgia, serif;
+    font-weight: 400;
+  }
+
+  .font-serif-display {
+    font-family: 'Instrument Serif', Georgia, serif;
+  }
+}
+
+/* Linear/Stripe-style background pattern with warm tones */
+.bg-grid-pattern {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(224, 182, 105, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(224, 182, 105, 0.03) 1px, transparent 1px);
+}
+
+.bg-radial-gradient {
+  background: radial-gradient(circle at 50% 0%, rgba(224, 182, 105, 0.1) 0%, rgba(34, 18, 21, 0) 70%);
+}
+
+.bg-glass-card {
+  background: rgba(27, 13, 16, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(224, 182, 105, 0.12);
+}
+
+.bg-glass-card:hover {
+  border-color: rgba(224, 182, 105, 0.28);
+}
+
+/* Smooth custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #221215;
+}
+::-webkit-scrollbar-thumb {
+  background: #3B2126;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #4A2B31;
+}
+

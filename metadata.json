@@ -1,0 +1,8 @@
+{
+  "name": "Remix Paint Leads",
+  "description": "Client Acquisition Systems for Painting Businesses",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
