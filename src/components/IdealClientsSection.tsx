@@ -53,7 +53,7 @@ export const IdealClientsSection: React.FC<IdealClientsSectionProps> = ({ onOpen
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#E0B669]/5 blur-[150px] rounded-full pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-[#E0B669]/5 blur-[150px] rounded-full pointer-events-none" />
 
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 sm:space-y-12 md:space-y-16 relative z-10">
+      <div className="max-w-5xl mx-auto px-5 sm:px-6 lg:px-8 space-y-8 sm:space-y-12 md:space-y-16 relative z-10">
         
         {/* Section Header */}
         <motion.div 
@@ -61,13 +61,13 @@ export const IdealClientsSection: React.FC<IdealClientsSectionProps> = ({ onOpen
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
-          className="text-center max-w-3xl mx-auto space-y-2.5 sm:space-y-4 md:space-y-6"
+          className="text-center max-w-3xl mx-auto space-y-3 sm:space-y-4 md:space-y-6"
         >
-          <h2 className="text-[24px] xs:text-[27px] sm:text-[36px] md:text-5xl font-normal font-serif-display text-[#F6F2EA] tracking-tight leading-tight">
+          <h2 className="text-[25px] xs:text-[28px] sm:text-[36px] md:text-5xl font-normal font-serif-display text-[#F6F2EA] tracking-tight leading-tight">
             The Businesses We Get the <span className="text-[#E0B669] italic">Best</span> Results With
           </h2>
 
-          <p className="text-[#C2B29F] text-[14px] sm:text-[16px] md:text-lg max-w-xs xs:max-w-sm sm:max-w-xl md:max-w-2xl mx-auto leading-[1.55]">
+          <p className="text-[#C2B29F] text-[14px] sm:text-[16px] md:text-lg max-w-full xs:max-w-sm sm:max-w-xl md:max-w-2xl mx-auto leading-[1.55]">
             We partner with established painting contractors who are looking for a reliable growth engine built for the long haul.
           </p>
         </motion.div>
@@ -78,7 +78,7 @@ export const IdealClientsSection: React.FC<IdealClientsSectionProps> = ({ onOpen
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, margin: "-100px" }}
-          className="grid grid-cols-1 md:grid-cols-2 gap-3.5 sm:gap-6"
+          className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-6"
         >
           {cards.map((card) => {
             const Icon = card.icon;
@@ -86,14 +86,14 @@ export const IdealClientsSection: React.FC<IdealClientsSectionProps> = ({ onOpen
               <motion.div
                 variants={itemVariants}
                 key={card.id}
-                className="bg-gradient-to-br from-[#221215] to-[#1B0D10] p-4 sm:p-6 md:p-8 rounded-2xl md:rounded-3xl border border-[#3b2126]/60 hover:border-[#E0B669]/40 transition-all duration-300 group flex flex-row gap-3.5 sm:gap-6 items-start shadow-sm hover:shadow-xl hover:shadow-[#E0B669]/5"
+                className="bg-gradient-to-br from-[#221215] to-[#1B0D10] p-4 sm:p-6 md:p-8 rounded-2xl md:rounded-3xl border border-[#3b2126]/60 hover:border-[#E0B669]/40 transition-all duration-300 group flex flex-row gap-3 sm:gap-5 items-start shadow-sm hover:shadow-xl hover:shadow-[#E0B669]/5"
               >
-                <div className="w-9 h-9 sm:w-14 sm:h-14 rounded-full bg-[#180c0e] border border-[#3b2126] flex items-center justify-center text-[#E0B669] shrink-0 group-hover:scale-110 transition-transform duration-300 shadow-inner">
+                <div className="w-10 h-10 sm:w-14 sm:h-14 rounded-full bg-[#180c0e] border border-[#3b2126] flex items-center justify-center text-[#E0B669] shrink-0 group-hover:scale-110 transition-transform duration-300 shadow-inner">
                   <Icon className="w-4 h-4 sm:w-6 sm:h-6" />
                 </div>
 
                 <div className="space-y-1 sm:space-y-3">
-                  <h3 className="text-[16px] sm:text-[20px] md:text-[22px] font-normal font-serif-display text-[#F6F2EA] leading-tight group-hover:text-[#E0B669] transition-colors">
+                  <h3 className="text-[15.5px] sm:text-[20px] md:text-[22px] font-normal font-serif-display text-[#F6F2EA] leading-tight group-hover:text-[#E0B669] transition-colors">
                     {card.title}
                   </h3>
 
@@ -112,7 +112,7 @@ export const IdealClientsSection: React.FC<IdealClientsSectionProps> = ({ onOpen
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="text-center pt-2 sm:pt-4 md:pt-8 w-full"
+          className="text-center pt-4 sm:pt-4 md:pt-8 w-full"
         >
           <button
             onClick={onOpenCheckModal}

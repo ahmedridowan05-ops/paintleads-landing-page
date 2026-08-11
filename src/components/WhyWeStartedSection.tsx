@@ -9,9 +9,9 @@ interface WhyWeStartedSectionProps {
 export const WhyWeStartedSection: React.FC<WhyWeStartedSectionProps> = ({ onOpenCheckModal }) => {
   return (
     <section id="why-we-started" className="py-10 sm:py-16 md:py-28 bg-[#1B0D10] relative overflow-hidden border-t border-[#3b2126]">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8">
         
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-7 sm:gap-10 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 lg:gap-16 items-center">
           
           {/* Left Column: Only one large photo container */}
           <motion.div 
@@ -21,13 +21,13 @@ export const WhyWeStartedSection: React.FC<WhyWeStartedSectionProps> = ({ onOpen
             transition={{ duration: 0.6 }}
             className="lg:col-span-5"
           >
-            <div className="relative aspect-[16/10] sm:aspect-square md:aspect-[4/5] w-full rounded-2xl md:rounded-[2rem] overflow-hidden bg-gradient-to-br from-[#221215] to-[#180c0e] border border-[#3b2126]/60 flex items-center justify-center text-center shadow-2xl group">
+            <div className="relative aspect-[3/2] sm:aspect-square md:aspect-[4/5] w-full rounded-2xl md:rounded-[2rem] overflow-hidden bg-gradient-to-br from-[#221215] to-[#180c0e] border border-[#3b2126]/60 flex items-center justify-center text-center shadow-2xl group">
               <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-10 pointer-events-none mix-blend-overlay z-10"></div>
               
               <img 
                 src="/founders.png" 
                 alt="Ridowan & Siam - Paint Leads Founders"
-                className="absolute inset-0 w-full h-full object-cover object-top scale-[1.05] sm:scale-[1.15] group-hover:scale-[1.2] opacity-85 group-hover:opacity-100 transition-all duration-700 z-0" 
+                className="absolute inset-0 w-full h-full object-cover object-top scale-[1.02] sm:scale-[1.15] group-hover:scale-[1.2] opacity-85 group-hover:opacity-100 transition-all duration-700 z-0" 
               />
 
             </div>
@@ -39,18 +39,18 @@ export const WhyWeStartedSection: React.FC<WhyWeStartedSectionProps> = ({ onOpen
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="lg:col-span-7 space-y-5 sm:space-y-8 md:space-y-10"
+            className="lg:col-span-7 space-y-4 sm:space-y-8 md:space-y-10"
           >
             <div className="space-y-2.5 sm:space-y-4">
-              <h2 className="text-[24px] xs:text-[27px] sm:text-[36px] md:text-5xl font-normal font-serif-display text-[#F6F2EA] tracking-tight leading-tight">
+              <h2 className="text-[25px] xs:text-[28px] sm:text-[36px] md:text-5xl font-normal font-serif-display text-[#F6F2EA] tracking-tight leading-tight">
                 Why We Started Paint Leads
               </h2>
             </div>
 
             <div className="relative">
-              <Quote className="absolute -left-2 -top-2 md:-left-6 md:-top-4 w-5 h-5 sm:w-8 sm:h-8 md:w-12 md:h-12 text-[#E0B669]/10 rotate-180" />
+              <Quote className="absolute -left-2 -top-2 md:-left-6 md:-top-4 w-6 h-6 sm:w-8 sm:h-8 md:w-12 md:h-12 text-[#E0B669]/10 rotate-180" />
               
-              <div className="space-y-3.5 sm:space-y-6 text-[#A6978A] md:text-[#C2B29F] text-[13.5px] sm:text-[16px] md:text-lg leading-[1.6] md:leading-relaxed font-normal relative z-10">
+              <div className="space-y-3 sm:space-y-6 text-[#A6978A] md:text-[#C2B29F] text-[13.5px] sm:text-[16px] md:text-lg leading-[1.6] md:leading-relaxed font-normal relative z-10">
                 <p>
                   We realised most painting businesses weren't struggling because they weren't good painters.
                 </p>
@@ -60,7 +60,7 @@ export const WhyWeStartedSection: React.FC<WhyWeStartedSectionProps> = ({ onOpen
                 </p>
 
                 <div className="pl-3 sm:pl-6 border-l-2 border-[#E0B669]/40 py-1 my-3 sm:my-6">
-                  <p className="text-[#E0B669] italic font-serif-display text-[16px] sm:text-xl md:text-2xl">
+                  <p className="text-[#E0B669] italic font-serif-display text-[15.5px] sm:text-xl md:text-2xl">
                     We wanted to build something different. Not another agency.
                   </p>
                 </div>
@@ -75,10 +75,10 @@ export const WhyWeStartedSection: React.FC<WhyWeStartedSectionProps> = ({ onOpen
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row items-center sm:items-center justify-between gap-5 pt-4 sm:pt-6 border-t border-[#3b2126]/50 text-center sm:text-left">
+            <div className="flex flex-col sm:flex-row items-center sm:items-center justify-between gap-4 pt-3 sm:pt-6 border-t border-[#3b2126]/50 text-center sm:text-left">
               {/* Names */}
               <div className="space-y-0.5">
-                <div className="text-xl md:text-2xl font-serif-display text-[#F6F2EA] italic">Ridowan & Siam</div>
+                <div className="text-lg md:text-2xl font-serif-display text-[#F6F2EA] italic">Ridowan & Siam</div>
                 <div className="text-[10.5px] md:text-xs text-[#A6978A] tracking-[0.15em] uppercase font-semibold">Paint Leads Founders</div>
               </div>
 

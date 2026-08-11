@@ -37,7 +37,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCheckModal }) => {
           : 'bg-transparent py-4'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 flex items-center justify-between">
         {/* Logo */}
         <a href="#" className="flex items-center gap-2 sm:gap-2.5 group">
           <div className="w-[42px] h-[42px] sm:w-[46px] sm:h-[46px] md:w-[52px] md:h-[52px] rounded-xl bg-[#E0B669]/10 border border-[#E0B669]/30 flex items-center justify-center text-[#E0B669] group-hover:scale-105 transition-transform">
@@ -99,7 +99,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCheckModal }) => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-[#180c0e]/98 backdrop-blur-xl border-b border-[#3b2126] px-5 py-5 space-y-4 shadow-2xl overflow-hidden"
+            className="md:hidden bg-[#180c0e]/98 backdrop-blur-xl border-b border-[#3b2126] px-5 py-4 space-y-4 shadow-2xl overflow-hidden"
           >
             <div className="flex flex-col space-y-1">
               {navLinks.map((link) => (
@@ -107,7 +107,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCheckModal }) => {
                   key={link.label}
                   href={link.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="px-3.5 py-2.5 text-sm font-medium text-[#C2B29F] hover:text-[#E0B669] hover:bg-[#281519] rounded-lg transition-colors"
+                  className="px-4 py-3 text-sm font-medium text-[#C2B29F] hover:text-[#E0B669] hover:bg-[#281519] rounded-lg transition-colors"
                 >
                   {link.label}
                 </a>
@@ -124,7 +124,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCheckModal }) => {
                   setIsMobileMenuOpen(false);
                   onOpenCheckModal();
                 }}
-                className="w-full bg-[#E0B669] text-[#221215] font-bold py-3.5 px-4 rounded-full text-xs flex items-center justify-center gap-2 uppercase tracking-wider active:scale-[0.98] transition-transform"
+                className="w-full bg-[#E0B669] text-[#221215] font-bold min-h-[52px] py-0 px-4 rounded-full text-xs flex items-center justify-center gap-2 uppercase tracking-wider active:scale-[0.98] transition-transform"
               >
                 <MapPin className="w-4 h-4" />
                 <span>See If Your Area Is Available</span>
