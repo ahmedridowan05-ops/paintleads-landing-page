@@ -39,15 +39,15 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCheckModal }) => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         {/* Logo */}
-        <a href="#" className="flex items-center gap-2.5 group">
-          <div className="w-[46px] h-[46px] md:w-[52px] md:h-[52px] rounded-xl bg-[#E0B669]/10 border border-[#E0B669]/30 flex items-center justify-center text-[#E0B669] group-hover:scale-105 transition-transform">
-            <span className="font-serif-display font-bold text-xl md:text-2xl leading-none">PL</span>
+        <a href="#" className="flex items-center gap-2 sm:gap-2.5 group">
+          <div className="w-[42px] h-[42px] sm:w-[46px] sm:h-[46px] md:w-[52px] md:h-[52px] rounded-xl bg-[#E0B669]/10 border border-[#E0B669]/30 flex items-center justify-center text-[#E0B669] group-hover:scale-105 transition-transform">
+            <span className="font-serif-display font-bold text-lg sm:text-xl md:text-2xl leading-none">PL</span>
           </div>
           <div className="flex flex-col">
-            <span className="font-serif-display font-bold text-[20px] md:text-[22px] text-[#F6F2EA] tracking-tight leading-none group-hover:text-[#E0B669] transition-colors">
+            <span className="font-serif-display font-bold text-[18px] sm:text-[20px] md:text-[22px] text-[#F6F2EA] tracking-tight leading-none group-hover:text-[#E0B669] transition-colors">
               Paint Leads
             </span>
-            <span className="text-[10px] md:text-[11px] text-[#BFAEA0] font-medium tracking-wide mt-0.5 md:mt-1">
+            <span className="text-[9.5px] sm:text-[10px] md:text-[11px] text-[#BFAEA0] font-medium tracking-wide mt-0.5 md:mt-1">
               Client Acquisition Systems
             </span>
           </div>
@@ -85,7 +85,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCheckModal }) => {
         {/* Mobile Hamburger Toggle */}
         <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className="md:hidden flex items-center justify-center w-[46px] h-[46px] rounded-lg bg-[#180c0e] border border-[#3b2126] text-[#C2B29F] hover:text-[#F6F2EA]"
+          className="md:hidden flex items-center justify-center w-[42px] h-[42px] sm:w-[46px] sm:h-[46px] rounded-lg bg-[#180c0e] border border-[#3b2126] text-[#C2B29F] hover:text-[#F6F2EA] active:scale-95 transition-transform"
           aria-label="Toggle Navigation Menu"
         >
           {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -99,24 +99,24 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCheckModal }) => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-[#180c0e] border-b border-[#3b2126] px-6 py-6 space-y-4"
+            className="md:hidden bg-[#180c0e]/98 backdrop-blur-xl border-b border-[#3b2126] px-5 py-5 space-y-4 shadow-2xl overflow-hidden"
           >
-            <div className="flex flex-col space-y-2">
+            <div className="flex flex-col space-y-1">
               {navLinks.map((link) => (
                 <a
                   key={link.label}
                   href={link.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="px-3 py-2 text-sm text-[#C2B29F] hover:text-[#E0B669] hover:bg-[#281519] rounded-lg transition-colors"
+                  className="px-3.5 py-2.5 text-sm font-medium text-[#C2B29F] hover:text-[#E0B669] hover:bg-[#281519] rounded-lg transition-colors"
                 >
                   {link.label}
                 </a>
               ))}
             </div>
 
-            <div className="pt-2 border-t border-[#3b2126] space-y-3">
+            <div className="pt-3 border-t border-[#3b2126] space-y-3">
               <div className="flex items-center gap-2 text-xs text-[#BFAEA0] px-2">
-                <span className="w-2 h-2 rounded-full bg-[#E0B669] animate-pulse" />
+                <span className="w-2 h-2 rounded-full bg-[#E0B669] animate-pulse shrink-0" />
                 <span>Strict 1 Partner Per Service Area Exclusivity</span>
               </div>
               <button
@@ -124,7 +124,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCheckModal }) => {
                   setIsMobileMenuOpen(false);
                   onOpenCheckModal();
                 }}
-                className="w-full bg-[#E0B669] text-[#221215] font-bold py-3 px-4 rounded-full text-xs flex items-center justify-center gap-2 uppercase tracking-wider"
+                className="w-full bg-[#E0B669] text-[#221215] font-bold py-3.5 px-4 rounded-full text-xs flex items-center justify-center gap-2 uppercase tracking-wider active:scale-[0.98] transition-transform"
               >
                 <MapPin className="w-4 h-4" />
                 <span>See If Your Area Is Available</span>

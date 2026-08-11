@@ -41,7 +41,7 @@ export default function App() {
         <ClientVideoSection onSeeHowWeBuild={handleSeeHowWeBuild} />
 
         {/* Section 3: What We Build Together */}
-        <WhatWeBuildSection />
+        <WhatWeBuildSection onOpenCheckModal={handleOpenCheckModal} />
 
         {/* Section 4: The Businesses We Get The Best Results With */}
         <IdealClientsSection onOpenCheckModal={handleOpenCheckModal} />
