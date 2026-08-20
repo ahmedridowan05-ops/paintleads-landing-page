@@ -50,7 +50,22 @@ export const AreaAvailabilityModal: React.FC<AreaAvailabilityModalProps> = ({
       window.removeEventListener('message', handleTallyMessage);
     };
   }, []);
+  const pageParams = new URLSearchParams(window.location.search);
 
+  const tallyParams = new URLSearchParams({
+    alignLeft: '1',
+    hideTitle: '1',
+    transparentBackground: '1',
+    dynamicHeight: '1',
+  });
+
+  const utmAd = pageParams.get('utm_ad');
+  const adId = pageParams.get('ad_id');
+
+  if (utmAd) tallyParams.set('utm_ad', utmAd);
+  if (adId) tallyParams.set('ad_id', adId);
+
+  const tallySrc = `https://tally.so/embed/D4YR5j?${tallyParams.toString()}`;
   if (!isOpen) return null;
 
   return (
@@ -73,7 +88,7 @@ export const AreaAvailabilityModal: React.FC<AreaAvailabilityModalProps> = ({
 
           <div className="flex-1 w-full overflow-y-auto pt-8 sm:pt-4 pb-2">
             <iframe
-              src="https://tally.so/embed/D4YR5j?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+              src={tallySrc}
               width="100%"
               height="750"
               frameBorder="0"
